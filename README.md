@@ -1,4 +1,4 @@
-<img width="1456" height="703" alt="image" src="https://github.com/user-attachments/assets/0dffbda2-48a9-4ad9-8b63-0279216c3f8c" /># KCMT Datathon 2026
+KCMT Datathon 2026
 
 ## Overview
 This repository contains the full solution of **Team KCMT** for **Datathon 2026 – Round 1**.
