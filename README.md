@@ -23,7 +23,7 @@ Explore patterns, trends, and relationships in the dataset.
 
 **Analysis Levels:**
 - Descriptive – What happened  
-- iagnostic – Why it happened  
+- Diagnostic – Why it happened  
 - Predictive – What will happen  
 - Prescriptive – What should be done  
 
