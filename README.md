@@ -1,4 +1,4 @@
-# KCMT Datathon 2026
+<img width="1456" height="703" alt="image" src="https://github.com/user-attachments/assets/0dffbda2-48a9-4ad9-8b63-0279216c3f8c" /># KCMT Datathon 2026
 
 ## Overview
 This repository contains the full solution of **Team KCMT** for **Datathon 2026 – Round 1**.
@@ -10,7 +10,34 @@ The competition focuses on transforming raw **e-commerce data** into:
 ---
 
 ## Project Structure
-
+KCMT-Datathon2026/
+│
+├── Input Data
+│ 
+├── Part 3 - Sales Forecasting
+│ ├── pipeline
+│ │  ├── main.py
+│ │  ├── predict.py
+│ │  ├── preprocess.py
+│ │  ├── train.py
+│ │  ├── util.py
+│ ├── README.md
+│ ├── actual_vs_pred.png
+│ ├── lgb_importance.png
+│ ├── part3_forecast_plot.png
+│ ├── part3_forecasting.py
+│ ├── part3_solution.ipynb
+│ ├── shap_importance.png
+│ ├── shap_summary.png
+│ └── submission.csv
+│
+├── Part 1 - MCQ
+│ 
+├── Part 2 - EDA
+│ 
+├── README.md
+│
+└── requirements.txt 
 ### Part 1 – MCQ (Data Understanding)
 - Answer 10 analytical questions  
 - Based on dataset exploration  
