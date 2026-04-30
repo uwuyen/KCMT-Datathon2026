@@ -14,14 +14,27 @@ The competition focuses on transforming raw **e-commerce data** into:
 KCMT-Datathon2026/
 │
 ├── Input Data
-│ 
+│ ├── customers.csv
+│ ├── geography.csv
+│ ├── inventory.csv
+│ ├── order_items.csv
+│ ├── orders.csv
+│ ├── payments.csv
+│ ├── products.csv
+│ ├── promotions.csv
+│ ├── returns.csv
+│ ├── reviews.csv
+│ ├── sales.csv
+│ ├── shipments.csv
+│ └── web_traffic.csv
+│
 ├── Part 3 - Sales Forecasting
 │ ├── pipeline
 │ │  ├── main.py
 │ │  ├── predict.py
 │ │  ├── preprocess.py
 │ │  ├── train.py
-│ │  ├── util.py
+│ │  └── util.py
 │ ├── README.md
 │ ├── actual_vs_pred.png
 │ ├── lgb_importance.png
