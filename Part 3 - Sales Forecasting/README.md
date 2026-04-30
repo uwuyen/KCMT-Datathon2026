@@ -40,7 +40,7 @@ Tree model extrapolate `year` feature từ phân phối 2012–2022, dẫn đế
 | Model B — Fourier + Ridge | 733,474 | 1,023,590 | 0.6229 | 667,816 | 930,127 | 0.5887 |
 | Model C — LightGBM ★ | 517,017 | 726,630 | 0.8100 | 443,231 | 623,855 | 0.8150 |
 | Model D — XGBoost ★ | 517,880 | 729,474 | 0.8085 | 448,212 | 628,761 | 0.8121 |
-| **Best-2 Ensemble C+D ✅** | **513,622** | **724,498** | **0.8111** | **442,430** | **622,617** | **0.8157** |
+| **Best-2 Ensemble C+D ** | **513,622** | **724,498** | **0.8111** | **442,430** | **622,617** | **0.8157** |
 
 ---
 
@@ -103,8 +103,6 @@ sales.csv (2012-07-04 → 2022-12-31, 3,833 ngày)
    Retrain C+D trên toàn 2012–2022
                  │
    Predict 2023-01-01 → 2024-07-01
-                 │
-          submission.csv ✅
 ```
 
 ---
@@ -128,7 +126,7 @@ Q1-end (tháng 3) và Q2-start (tháng 4) đặc biệt spike mạnh.
 #### Cross-year Seasonal Profile (thay thế lag features)
 
 ```python
-# Chuẩn hoá Revenue theo năm, lấy trung bình qua (month, day)
+# Chuẩn hoá Revenue theo năm, lấy trung bình qua (month, day
 rev_norm[year, month, day] = Revenue / mean_Revenue_of_year
 rev_norm_mean[month, day]  = average across all years (2012-2022)
 ```
@@ -138,9 +136,9 @@ Feature này mang thông tin seasonal của từng ngày mà không cần lag (k
 #### Cyclic Encoding
 
 ```python
-month_sin = sin(2π × month / 12)   # tháng 12 và 1 "gần nhau"
+month_sin = sin(2π × month / 12)   # tháng 12 và 1 gần nhau
 month_cos = cos(2π × month / 12)
-dow_sin   = sin(2π × dow / 7)      # thứ 7 và thứ 2 "gần nhau"
+dow_sin   = sin(2π × dow / 7)      # thứ 7 và thứ 2 gần nhau
 ```
 
 ---
@@ -229,13 +227,13 @@ Mô hình đơn giản được hiệu chỉnh đúng về scale thường thắ
 
 | Ràng buộc | Trạng thái |
 |-----------|-----------|
-| Chỉ dùng training data (2012–2022) | ✅ |
-| Không dùng test period để train | ✅ Time-based split |
-| Không có temporal leakage | ✅ Không dùng lag features |
-| Format `Date, Revenue, COGS` | ✅ Khớp sample_submission.csv |
-| Không có giá trị âm | ✅ `np.maximum(..., 0)` |
-| Không có NaN | ✅ |
-| Đúng 548 dòng (2023-01-01 → 2024-07-01) | ✅ |
+| Chỉ dùng training data (2012–2022) | ✓ |
+| Không dùng test period để train | ✓ Time-based split |
+| Không có temporal leakage | ✓ Không dùng lag features |
+| Format `Date, Revenue, COGS` | ✓ Khớp sample_submission.csv |
+| Không có giá trị âm | ✓ `np.maximum(..., 0)` |
+| Không có NaN | ✓ |
+| Đúng 548 dòng (2023-01-01 → 2024-07-01) | ✓ |
 
 ---
 
