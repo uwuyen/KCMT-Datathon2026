@@ -10,6 +10,7 @@ The competition focuses on transforming raw **e-commerce data** into:
 ---
 
 ## Project Structure
+```
 KCMT-Datathon2026/
 │
 ├── Input Data
@@ -37,7 +38,8 @@ KCMT-Datathon2026/
 │ 
 ├── README.md
 │
-└── requirements.txt 
+└── requirements.txt
+``` 
 ### Part 1 – MCQ (Data Understanding)
 - Answer 10 analytical questions  
 - Based on dataset exploration  
