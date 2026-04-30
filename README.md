@@ -45,8 +45,7 @@ Explore patterns, trends, and relationships in the dataset.
 ### Core Libraries
 - pandas  
 - numpy  
-- matplotlib  
-- seaborn  
+- matplotlib   
 - scikit-learn  
 
 ### Machine Learning / Forecasting
